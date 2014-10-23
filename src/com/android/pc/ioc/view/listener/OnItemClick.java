@@ -23,8 +23,8 @@ public class OnItemClick extends OnListener implements OnItemClickListener {
 
 	@Override
 	protected void listener(View view) {
-		if (view instanceof ListView) {
-			((ListView) view).setOnItemClickListener(this);
+		if (view instanceof AbsListView) {
+			((AbsListView) view).setOnItemClickListener(this);
 		}else {
 			Ioc.getIoc().getLogger().e(view.getClass() +" 无法设置OnItemClick 请检查InjectMethod的参数\n");
 		}
